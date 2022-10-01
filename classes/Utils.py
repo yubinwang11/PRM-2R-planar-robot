@@ -1,6 +1,8 @@
+from turtle import circle
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.patches import Rectangle
+from matplotlib.patches import Circle
 
 
 class Utils:
@@ -24,6 +26,10 @@ class Utils:
             else:
                 currentAxis.add_patch(Rectangle(
                     (ob.bottomLeft[0], ob.bottomLeft[1]), ob.width, ob.height, alpha=0.4))
+                
+        currentAxis.add_patch(Circle(xy=(65, 65),    # 圆心坐标
+            radius=10)
+                    )
 
         plt.scatter(curr[0], curr[1], s=200, c='green')
         plt.scatter(dest[0], dest[1], s=200, c='green')

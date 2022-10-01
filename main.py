@@ -8,7 +8,7 @@ from classes import PRMController, Obstacle, Utils
 def main(args):
 
     parser = argparse.ArgumentParser(description='PRM Path Planning Algorithm')
-    parser.add_argument('--numSamples', type=int, default=1000, metavar='N',
+    parser.add_argument('--numSamples', type=int, default=5000, metavar='N',
                         help='Number of sampled points')
     args = parser.parse_args()
 
