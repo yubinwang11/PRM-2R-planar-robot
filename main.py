@@ -1,8 +1,10 @@
 
 import sys
+from tracemalloc import start
 import numpy as np
 import argparse
 from classes import PRMController, Obstacle, Utils
+import time
 
 
 def main(args):
@@ -43,4 +45,8 @@ def main(args):
 
 
 if __name__ == '__main__':
+    start_time = time.time()
     main(sys.argv)
+    end_time = time.time()
+    computation_time = end_time - start_time
+    print(f"total comuputation time is {computation_time}")

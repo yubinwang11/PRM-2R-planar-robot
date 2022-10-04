@@ -89,14 +89,14 @@ class PRMController:
         if(saveImage):
             #plt.savefig("{}_samples.png".format(self.numOfCoords))
             plt.savefig('PRM 2R planar robot.eps',dpi=600,format='eps')
-        plt.show()
+        #plt.show()
 
     def genCoords(self, maxSizeOfMap=100):
-        '''self.coordsList = np.random.randint(
+        self.coordsList = np.random.randint(
             maxSizeOfMap, size=(self.numOfCoords, 2))
         #print(type(self.coordsList))
         #print(shape(self.coordsList.shape()))
-        print(self.coordsList)
+        #print(self.coordsList)
         '''
         self.coordsList = list()
         for i  in range(self.numOfCoords):
@@ -105,7 +105,7 @@ class PRMController:
             x = l * math.cos(deg) + 50
             y = l * math.sin(deg) + 50
             self.coordsList.append([x,y])
-        
+        '''
         self.coordsList = np.array(self.coordsList)
         
         # Adding begin and end points
